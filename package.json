@@ -1,0 +1,27 @@
+{
+  "name": "@local/sidebar-scratchpad",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Adds a Scratchpad entry to the left sidebar and a locally saved notes panel in the main column.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wake2008dingtalk-sys/dsh-plugin-scratchpad.git"
+  },
+  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "cordis", "plugin", "sidebar", "scratchpad"],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
